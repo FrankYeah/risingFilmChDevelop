@@ -105,7 +105,7 @@ body {
   line-height: 1;
   margin: 0px;
   padding: 0px;
-  font-family: 'Roboto', 'Noto Sans TC', 'Noto Sans SC' ,sans-serif;
+  font-family: 'NotoSansTC', 'Roboto', 'Noto Sans TC', 'Noto Sans SC' ,sans-serif;
   font-size: 18px;
   font-weight: 300;
   color: #FFFFFF;

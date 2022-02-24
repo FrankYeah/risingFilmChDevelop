@@ -69,6 +69,7 @@ export default {
 
   &-head {
     text-align: center;
+    font-family: 'Roboto';
     font-size: 64px;
     font-weight: 900;
     letter-spacing: 4px;

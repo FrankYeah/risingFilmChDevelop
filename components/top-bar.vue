@@ -23,7 +23,7 @@
           <div class="top-popup-animate5">
             <span>中</span>
             ｜
-            <a href="https://www.risingfilm.asia" target="_blank" class="top-popup-lang" style="opacity: 0.3;">EN</a>
+            <a href="https://www.risingfilm.asia" target="_blank" class="top-popup-lang" style="opacity: 0.3; font-family: 'Roboto';">EN</a>
             
             
           </div>
@@ -41,14 +41,14 @@
               :class="[`top-popup-href top-popup-href1 top-popup-animate1`,
               {'top-popup-href-dark': !isHover.about},
               {'top-popup-href-light': isAllLight}]"
-            >About</div>
+            >關於</div>
             <div @click="closeMenu" :class="['top-popup-line', {'top-popup-line-show top-popup-line1': isHover.about}]"></div>
           </nuxt-link>
 
           <div @click="isHover.developmentIn = true"
             @mouseover="hoverLink('development')"
             :class="['top-popup-href top-popup-href2 top-popup-animate2', {'top-popup-href-dark': !isHover.development}, {'top-popup-href-light': isAllLight}]"
-          >Works</div>
+          >作品</div>
           <div @click="closeMenu" @mouseover="hoverLink('development')" :class="['top-popup-line', {'top-popup-line-show top-popup-line2': isHover.development}]" ></div>
 
           <div v-if="isHover.developmentIn"
@@ -59,19 +59,19 @@
               <div @click="closeMenu"
                 @mouseover="hoverLink('development')"
                 class="top-popup-href-s"
-              >Development</div>
+              >開發</div>
             </nuxt-link>
             <nuxt-link to="/works#production">
               <div @click="closeMenu"
                 @mouseover="hoverLink('development')"
                 class="top-popup-href-s"
-              >Production</div>
+              >製作</div>
             </nuxt-link>
             <nuxt-link to="/works#other">
               <div @click="closeMenu"
                 @mouseover="hoverLink('development')"
                 class="top-popup-href-s top-popup-href-s-last"
-              >Other Works</div>
+              >參與</div>
             </nuxt-link>
           </div>
           <nuxt-link to="/virtual">
@@ -79,7 +79,7 @@
               @mouseover="hoverLink('virtual')" 
               @mouseleave="leaveLink" 
               :class="['top-popup-href top-popup-href4 top-popup-animate3', {'top-popup-href-dark': !isHover.virtual}, {'top-popup-href-light': isAllLight}]"
-            >Virtual Production</div>
+            >虛擬製作</div>
             <div @click="closeMenu" :class="['top-popup-line', {'top-popup-line-show top-popup-line4': isHover.virtual}]"></div>
           </nuxt-link>
           <nuxt-link to="/contact">
@@ -87,7 +87,7 @@
               @mouseover="hoverLink('contact')" 
               @mouseleave="leaveLink" 
               :class="['top-popup-href top-popup-href5 top-popup-animate4', {'top-popup-href-dark': !isHover.contact}, {'top-popup-href-light': isAllLight}]"
-            >Contact</div>
+            >專人洽詢</div>
             <div @click="closeMenu" :class="['top-popup-line', {'top-popup-line-show top-popup-line5': isHover.contact}]"></div>
           </nuxt-link>
         </div>

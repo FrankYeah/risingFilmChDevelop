@@ -27,7 +27,7 @@
       <textarea :class="['contact-input contact-textarea', {'contact-nofill': !isForm.message}]" @focus="focusInput('message')" v-model="message" placeholder="訊息"></textarea>
       <div class="contact-btn-box">
         <div class="contact-error-text">
-          <span v-if="!isPass">Please Fill Required field above</span>
+          <span v-if="!isPass">請填寫上方所有欄位</span>
         </div>
         <button class="contact-btn">送出</button>
       </div>
@@ -36,8 +36,8 @@
     <div v-if="isShowPopup" @click="closePopup" class="contact-popup">
       <div @click.stop class="contact-popup-box">
         <img class="contact-popup-img" v-lazy="require('@/assets/img/icon/success.png')" alt="success">
-        <div class="contact-popup-title">Success</div>
-        <div class="contact-popup-desc">The form has been sent successfully, someone will contact you later</div>
+        <div class="contact-popup-title">成功</div>
+        <div class="contact-popup-desc">表單已上傳成功，將會有專人與您聯繫</div>
         <button @click="closePopup" class="contact-popup-btn">Confirm</button>
       </div>
     </div>

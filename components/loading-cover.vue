@@ -50,6 +50,7 @@ export default {
   justify-content: center;
   align-items: center;
   background-color: #171719;
+  font-family: 'Roboto';
   text-align: center;
   z-index: 5;
 

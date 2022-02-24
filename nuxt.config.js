@@ -102,6 +102,7 @@ export default {
     '~assets/styles/global.css',
     '~assets/styles/global.scss',
     '~assets/fonts/roboto/roboto.css',
+    '~assets/fonts/NotoSansTC/NotoSansTC.css',
     'swiper/swiper-bundle.css',
     'animate.css/animate.css',
     'element-ui/lib/theme-chalk/index.css'

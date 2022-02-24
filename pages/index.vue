@@ -44,6 +44,7 @@ export default {
   top: 50%;
   width: 100%;
   transform: translate(-50%, -50%);
+  font-family: 'Roboto';
   text-align: center;
 
   &-head {

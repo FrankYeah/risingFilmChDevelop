@@ -2,7 +2,7 @@
   <div class="about">
     <boxWidth>
       <headTop>
-        <generalTitle :title="'About'"></generalTitle>
+        <generalTitle :title="'關於風度'"></generalTitle>
       </headTop>
       <div class="about-pre">
         <div>風度影業<span class="about-pre-en">RISING FILM</span> </div>
@@ -124,6 +124,7 @@ export default {
 
     &-en {
       margin-left: 16px;
+      font-family: 'Roboto';
     }
 
     & div:first-child {
