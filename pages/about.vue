@@ -4,20 +4,21 @@
       <headTop>
         <generalTitle :title="'About'"></generalTitle>
       </headTop>
-      <div class="about-pre1">Rising Films gathers resources to inject Taiwanese film and television talents</div>
-      <div class="about-pre2">
-        <div>Resources</div>
-        <div>Creativity</div>
-        <div>Business Models</div>
+      <div class="about-pre">
+        <div>風度影業<span class="about-pre-en">RISING FILM</span> </div>
+        <div>風度影業凝聚資源挹注台灣影視 人才，結合資源、創意、商業模 式， 開創台灣影視新局。</div>
       </div>
-      <div class="about-pre3">Combining resources, creativity, and business models, Create a new bureau of film and television in Taiwan.</div>
+
     </boxWidth>
     <div class="about-post-box">
       <img class="about-post" :src="require('@/assets/img/about/post.jpg')" alt="post">
     </div>
     <boxWidth>
-      <div class="about-desc">In 2021, he will invest in the production of "Youth Killing Love" directed by He Weiting, Won the Golden Horse Award and was shortlisted for five awards.</div>
-      <div class="about-title">OUR TEAM</div>
+      <div class="about-desc">2021年投資製作何蔚庭導演《青春弒戀》，<br>獲得金馬獎入圍五項大獎。</div>
+      <div class="about-member-box">
+        <div>團隊成員</div>
+        <div>集結業界開發/製作/行銷專家，打造一條龍產製商業模式</div>
+      </div>
       <div class="about-intro">
         <div class="about-team-box" 
           v-for="(team, index) in teamList"
@@ -32,7 +33,7 @@
         </div>
         
       </div>
-      <div class="about-partner-title">Partner</div>
+      <div class="about-partner-title">合作夥伴</div>
       <div class="about-partner-box">
         <img class="about-partner"
           v-for="(partner, index) in partnerList"
@@ -47,7 +48,7 @@
             <div class="about-popup-title">{{ selectedPerson.name }}</div>
             <div class="about-popup-sub">{{ selectedPerson.title }}</div>
             <div class="about-popup-desc">{{ selectedPerson.desc }}</div>
-            <div class="about-popup-awards">Awards</div>
+            <div v-if="selectedPerson.awards.length != 0" class="about-popup-awards">得獎</div>
             <div class="about-popup-award"
               v-for="(award, index) in selectedPerson.awards"
               :key="index">{{ award.name }}</div>
@@ -116,24 +117,24 @@ export default {
 .about {
   padding-bottom: 60px;
 
-  &-pre1 {
-    margin-top: 32px;
-    font-size: 48px;
-    line-height: 1.2;
-  }
-
-  &-pre2 {
+  &-pre {
     display: flex;
-    justify-content: space-between;
-    margin-top: 48px;
-    font-size: 48px;
-    font-weight: 900;
-  }
+    align-items: center;
+    margin-top: 32px;
 
-  &-pre3 {
-    width: 523px;
-    margin-top: 60px;
-    line-height: 1.3;
+    &-en {
+      margin-left: 16px;
+    }
+
+    & div:first-child {
+      width: 50%;
+      font-size: 36px;
+    }
+
+    & div:last-child {
+      width: 50%;
+      line-height: 1.5;
+    }
   }
 
   &-post-box {
@@ -143,20 +144,26 @@ export default {
   &-post {
     max-width: 1000px;
     width: 100%;
-    margin-top: 90px;
+    margin-top: 64px;
     text-align: center;
   }
 
   &-desc {
     width: 650px;
-    margin: 68px auto 0px;
+    margin: 41px auto 0px;
     text-align: center;
     line-height: 1.5;
   }
 
-  &-title {
-    margin-top: 140px;
-    font-size: 48px;
+  &-member-box {
+    display: flex;
+    align-items: flex-end;
+    margin-top: 112px;
+    
+    & div:first-child {
+      margin-right: 48px;
+      font-size: 32px;
+    }
   }
 
   &-intro {
@@ -192,23 +199,23 @@ export default {
   }
 
   &-name {
-    transform: translateY(-24px);
+    margin-top: 12px;
     font-size: 32px;
   }
 
   &-name-title {
-    transform: translateY(-16px);
+    margin-top: 6px;
     opacity: 0.5;
   }
 
   &-partner-title {
-    margin-top: 60px;
-    font-size: 48px;
+    margin-top: 100px;
+    font-size: 32px;
   }
 
   &-partner-box {
     width: 900px;
-    margin: 0px auto 80px;
+    margin: 20px auto 80px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -234,13 +241,13 @@ export default {
     }
 
     &-sub {
-      margin-top: 12px;
+      margin-top: 10px;
       opacity: 0.5;
     }
 
     &-desc {
-      margin-top: 24px;
-      line-height: 1.3;
+      margin-top: 23px;
+      line-height: 1.5;
       font-size: 14px;
       opacity: 0.5;
     }
@@ -263,25 +270,27 @@ export default {
 .about {
   padding-bottom: 0px;
 
-  &-pre1 {
-    margin-top: 19px;
-    font-size: 20px;
-  }
 
-  &-pre2 {
+  &-pre {
     flex-direction: column;
-    margin-top: 17px;
-    font-size: 24px;
+    margin-top: 22px;width: 100%;
 
-    & div {
-      margin-bottom: 11px;
+    &-en {
+      margin-left: 12px;
+      font-size: 22px;
     }
-  }
 
-  &-pre3 {
-    width: 100%;
-    margin-top: 16px;
-    font-size: 14px;
+    & div:first-child {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      font-size: 24px;
+    }
+
+    & div:last-child {
+      width: 100%;
+      margin-top: 22px;
+    }
   }
 
   &-post-box {
@@ -289,7 +298,7 @@ export default {
   }
 
   &-post {
-    margin-top: 42px;
+    margin-top: 36px;
   }
 
   &-desc {
@@ -297,9 +306,20 @@ export default {
     margin-top: 31px;
   }
 
-  &-title {
-    margin: 60px 0px 3px;
-    font-size: 24px;
+  &-member-box {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 78px;
+    
+    & div:first-child {
+      margin-right: 0px;
+      font-size: 24px;
+    }
+
+    & div:last-child {
+      margin-top: 16px;
+      line-height: 1.3;
+    }
   }
 
   &-intro {
@@ -322,16 +342,17 @@ export default {
 
   &-name-title {
     width: 130px;
-    margin: auto;
+    margin: 9px auto 0px;
   }
 
   &-partner-title {
     font-size: 24px;
-    margin: 32px 0px 50px;
+    margin: 72px 0px 40px;
   }
 
   &-partner-box {
     width: 100%;
+    margin: 20px auto 40px;
   }
 
   &-partner {
@@ -358,10 +379,9 @@ export default {
     }
 
     &-sub {
-      margin-top: 2px;
+      margin-top: 8px;
       text-align: center;
       font-size: 18px;
-      font-style: italic;
     }
 
     &-desc {

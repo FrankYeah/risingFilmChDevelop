@@ -77,8 +77,8 @@ export default {
     position: absolute;
     top: 32px;
     right: 32px;
-    width: 39px;
-    height: 39px;
+    width: 28px;
+    height: 28px;
     opacity: 0.5;
     transition: all 0.4s;
     transition-timing-function: ease-in-out;
@@ -106,6 +106,8 @@ export default {
   &-close {
     top: 32px;
     right: 20px;
+    width: 19px;
+    height: 19px;
   }
 }
 
