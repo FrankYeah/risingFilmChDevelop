@@ -1,7 +1,7 @@
 <template>
   <div class="bottom">
     <div class="bottom-social">
-      <a href="https://www.facebook.com/RisingFilmsAsia" target="_blank">
+      <a href="https://www.facebook.com/RisingFilmsTW" target="_blank">
         <img class="bottom-fb" v-lazy="require('@/assets/img/icon/fb.png')" alt="fb">
       </a>
       <a href="https://www.instagram.com/risingfilmsasia/" target="_blank">

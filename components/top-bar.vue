@@ -21,9 +21,11 @@
       >
         <div class="top-popup-row">
           <div class="top-popup-animate5">
-            <a href="https://www.risingfilms.com.tw" target="_blank" class="top-popup-lang" style="opacity: 0.3;">中</a>
+            <span>中</span>
             ｜
-            <span>EN</span>
+            <a href="https://www.risingfilm.asia" target="_blank" class="top-popup-lang" style="opacity: 0.3;">EN</a>
+            
+            
           </div>
           <img @click="closeMenu"
             class="top-popup-animate6"

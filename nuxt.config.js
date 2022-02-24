@@ -9,7 +9,7 @@ export default {
   //  壓縮圖片 https://squoosh.app/editor
   target: 'static',
   router: {
-    base: '/risingFilmEn/'
+    base: '/risingFilmCh/'
   },
   head: {
     titleTemplate: '%s',
@@ -28,7 +28,7 @@ export default {
       { hid: 'og:description' , property: 'og:description' , content: ''},
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/risingFilmEn/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/risingFilmCh/favicon.ico' }
     ]
   },
   // SCSS 配置
