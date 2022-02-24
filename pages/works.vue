@@ -3,9 +3,9 @@
     <div class="develop-title-box">
       <generalTitle :title="'作品'"></generalTitle>
       <div class="develop-scroll">
-        <div @click="scrollTo('development')">開發</div>
-        <div @click="scrollTo('production')">製作</div>
-        <div @click="scrollTo('other')">參與</div>
+        <div :class="[{'develop-scroll-current': currentPosition == 'development'}]" @click="scrollTo('development')">開發</div>
+        <div :class="[{'develop-scroll-current': currentPosition == 'production'}]" @click="scrollTo('production')">製作</div>
+        <div :class="[{'develop-scroll-current': currentPosition == 'other'}]" @click="scrollTo('other')">參與</div>
       </div>
     </div>
     <div class="develop-headtop"></div>
@@ -160,6 +160,8 @@ export default {
       developList: developList,
       productionList: productionList,
       otherList: otherList,
+      scrollTop: null,
+      currentPosition: 'development',
       isPostPopup: false,
       isMorePopup: false,
       selectedFilm: {
@@ -257,9 +259,13 @@ export default {
     }
   },
   mounted() {
+    window.addEventListener('scroll', this.handleScroll, false)
     if(this.$route.hash != '') {
       this.scrollTo('href')
     }
+  },
+  destroyed () {
+    window.removeEventListener('scroll', this.handleScroll, false)
   },
   computed: {
 
@@ -295,6 +301,21 @@ export default {
         tempId = position
       }      
       document.getElementById(tempId).scrollIntoView({ behavior: 'smooth' })
+    },
+    handleScroll() {
+      this.scrollTop = document.documentElement.scrollTop || document.body.scrollTop || 0
+      let tempDevelopment = document.getElementById('development').offsetTop
+      let tempProduction = document.getElementById('production').offsetTop
+      let tempOther = document.getElementById('other').offsetTop
+      if(this.scrollTop + 200 > tempOther) {
+        this.currentPosition = 'other'
+      } else if(this.scrollTop + 200 > tempProduction){
+        this.currentPosition = 'production'
+      } else {
+        this.currentPosition = 'development'
+      }
+
+      
     }
   },
   watch: {
@@ -335,7 +356,6 @@ export default {
       transition: all 0.4s;
       transition-timing-function: ease-in-out;
       opacity: 0.2;
-      
       cursor: pointer;
 
       &:hover {
@@ -343,6 +363,10 @@ export default {
         border-bottom: 0.5px solid white;
       }
     }
+  }
+
+  &-scroll-current {
+    opacity: 1 !important;
   }
 
   &-headtop {
