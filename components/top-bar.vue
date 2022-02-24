@@ -19,14 +19,13 @@
       <div v-if="isShowMenu"
       :class="[`top-popup`]"
       >
+        <div class="top-popup-language top-popup-animate5">
+          <span>中</span>
+          ｜
+          <a href="https://www.risingfilm.asia" target="_blank" class="top-popup-lang" style="opacity: 0.3; font-family: 'Roboto';">EN</a>
+        </div>
         <div class="top-popup-row">
-          <div class="top-popup-animate5">
-            <span>中</span>
-            ｜
-            <a href="https://www.risingfilm.asia" target="_blank" class="top-popup-lang" style="opacity: 0.3; font-family: 'Roboto';">EN</a>
-            
-            
-          </div>
+          <div></div>
           <img @click="closeMenu"
             class="top-popup-animate6"
             :src="require('@/assets/img/icon/close.png')"
@@ -55,11 +54,11 @@
             @mouseover="hoverLink('development')"
             class="top-popup-href-s-box"
           >
-            <nuxt-link to="/works#development">
+            <nuxt-link to="/works#other">
               <div @click="closeMenu"
                 @mouseover="hoverLink('development')"
                 class="top-popup-href-s"
-              >開發</div>
+              >參與</div>
             </nuxt-link>
             <nuxt-link to="/works#production">
               <div @click="closeMenu"
@@ -67,11 +66,11 @@
                 class="top-popup-href-s"
               >製作</div>
             </nuxt-link>
-            <nuxt-link to="/works#other">
+            <nuxt-link to="/works#development">
               <div @click="closeMenu"
                 @mouseover="hoverLink('development')"
                 class="top-popup-href-s top-popup-href-s-last"
-              >參與</div>
+              >開發</div>
             </nuxt-link>
           </div>
           <nuxt-link to="/virtual">
@@ -255,7 +254,7 @@ export default {
       font-size: 24px;
 
       & img {
-        width: 40px;
+        width: 30px;
         opacity: 0.5;
         transition: all 0.4s;
         transition-timing-function: ease-in-out;
@@ -265,6 +264,12 @@ export default {
           opacity: 1;
         }
       }
+    }
+
+    &-language {
+      position: fixed;
+      bottom: 32px;
+      right: 32px;
     }
 
     &-lang {
@@ -280,7 +285,8 @@ export default {
     &-link {
       display: flex;
       flex-direction: column;
-      font-size: 72px;
+      align-items: flex-end;
+      font-size: 24px;
 
       & a:first-child {
         margin-top: 20px;
@@ -288,8 +294,8 @@ export default {
     }
 
     &-href {
-      font-style: italic;
-      padding: 14px 0px;
+      margin-top: 60px;
+      padding: 0px 0px 8px;
       transition: all 0.4s;
       transition-timing-function: ease-in-out;
       cursor: pointer;
@@ -308,19 +314,19 @@ export default {
     }
 
     &-href1 {
-      width: 223px;
+      width: 50px;
     }
 
     &-href2 {
-      width: 230px;
+      width: 50px;
     }
 
     &-href4 {
-      width: 580px;
+      width: 100px;
     }
 
     &-href5 {
-      width: 260px;
+      width: 100px;
     }
 
     &-animate1 {
@@ -387,26 +393,25 @@ export default {
     }
 
     &-line1 {
-      width: 200px;
+      width: 48px;
     }
 
     &-line2 {
-      width: 210px;
+      width: 48px;
     }
 
     &-line4 {
-      width: 580px;
+      width: 96px;
     }
 
     &-line5 {
-      width: 260px;
+      width: 96px;
     }
 
     &-href-s-box {
       display: flex;
-      padding: 7px 0px 45px;
-      font-style: italic;
-      font-size: 36px;
+      padding: 17px 0px 0px 0px;
+      font-size: 24px;
 
       & a:first-child {
         margin-top: 0px;
@@ -414,7 +419,7 @@ export default {
     }
 
     &-href-s {
-      padding-right: 60px;
+      padding-right: 48px;
       transition: all 0.4s;
       transition-timing-function: ease-in-out;
       opacity: 0.15; 
@@ -501,7 +506,7 @@ export default {
     
 
     &-row {
-      font-size: 14px;
+      
 
       & img {
         
@@ -513,8 +518,6 @@ export default {
     }
 
     &-link {
-      font-size: 48px;
-      line-height: 1.1;
 
       & a:first-child {
         
@@ -522,8 +525,7 @@ export default {
     }
 
     &-href {
-      width: 270px !important;
-      padding: 24px 0px;
+      
     }
 
     &-href-light {
@@ -555,7 +557,7 @@ export default {
     }
 
     &-line-show {
-      background-color: transparent;
+      // background-color: transparent;
     }
 
     &-line-hide {
@@ -579,9 +581,6 @@ export default {
     }
 
     &-href-s-box {
-      flex-direction: column;
-      padding: 0px 0px 16px;
-      font-size: 24px;
 
       & a:first-child {
         
@@ -589,12 +588,11 @@ export default {
     }
 
     &-href-s {
-      padding: 0px 0px 18px;
       opacity: 1; 
     }
 
     &-href-s-last {
-      padding: 0px;
+
     }
   }
   
