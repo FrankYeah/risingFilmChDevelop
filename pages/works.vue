@@ -1,21 +1,21 @@
 <template>
   <div id="development" class="develop">
     <div class="develop-title-box">
-      <generalTitle :title="'Works'"></generalTitle>
+      <generalTitle :title="'作品'"></generalTitle>
       <div class="develop-scroll">
-        <div @click="scrollTo('development')">Development</div>
-        <div @click="scrollTo('production')">Production</div>
-        <div @click="scrollTo('other')">Other Works</div>
+        <div @click="scrollTo('development')">開發</div>
+        <div @click="scrollTo('production')">製作</div>
+        <div @click="scrollTo('other')">參與</div>
       </div>
     </div>
     <div class="develop-headtop"></div>
     <div class="develop-swiper-box">
       <div class="develop-head">
         <div class="develop-head-row">
-          <div>Development</div>
-          <div>Translating Taiwan's diverse cultural</div>
+          <div>開發</div>
+          <div>轉譯台灣多元文創  發揚台灣軟實力</div>
         </div>
-        <div @click="isMorePopup = true" class="develop-head-more">Learn More &gt;</div>
+        <div @click="isMorePopup = true" class="develop-head-more">瞭解更多 &gt;</div>
       </div>
       <swiper class="swiper develop-swiper" :options="swiperOption" ref="mySwiper">
         <swiper-slide class="develop-slide"
@@ -37,10 +37,10 @@
     <div id="production" class="develop-swiper-box">
       <div class="develop-head">
         <div class="develop-head-row">
-          <div>Production</div>
-          <div>Translating Taiwan's diverse cultural and creative industries to develop Taiwan's soft power</div>
+          <div>虛擬製作</div>
+          <div>放眼國際，立足台灣  專業製作實現國際合製片</div>
         </div>
-        <div @click="isMorePopup = true" class="develop-head-more">Learn More &gt;</div>
+        <div @click="isMorePopup = true" class="develop-head-more">瞭解更多 &gt;</div>
       </div>
       <swiper class="swiper develop-swiper" :options="swiperOption" ref="mySwiper">
         <swiper-slide class="develop-slide"
@@ -63,10 +63,10 @@
     <div id="other" class="develop-swiper-box">
       <div class="develop-head">
         <div class="develop-head-row">
-          <div>Other Works</div>
-          <div>Translating Taiwan's diverse cultural and creative industries to develop Taiwan's soft power</div>
+          <div>參與</div>
+          <div></div>
         </div>
-        <div @click="isMorePopup = true" class="develop-head-more">Learn More &gt;</div>
+        <div @click="isMorePopup = true" class="develop-head-more">瞭解更多 &gt;</div>
       </div>
       <swiper class="swiper develop-swiper" :options="swiperOption" ref="mySwiper">
         <swiper-slide class="develop-slide"
@@ -340,7 +340,7 @@ export default {
 
       &:hover {
         opacity: 1;
-        border-bottom: 1px solid white;
+        border-bottom: 0.5px solid white;
       }
     }
   }
@@ -467,7 +467,7 @@ export default {
 
     &-desc {
       margin-top: 30px;
-      line-height: 1.3;
+      line-height: 1.5;
       font-size: 14px;
       opacity: 0.5;
     }

@@ -1,9 +1,9 @@
 export const otherList = [
   {
     post: require('@/assets/img/develop/EX3.png'),
-    name: 'The Falls',
+    name: '瀑布',
     date: '2021.09',
-    desc: `The movie "Youth Killing Love" mainly describes the story of six characters who seem to be unrelated, but influence each other, and finally get involved in the case of random murder of teenagers. Concept, to explore the living environment of the Z generation, surrounded by virtual, online games, Internet celebrities, social public opinion, family issues, etc... Carrying these virtual but real sights, in a murder case that everyone fears, we can See "no one is an outsider"`,
+    desc: `電影《青春弒戀》主要描敘六位看似毫無關聯，卻相互影響著彼此，最後捲入青少年隨機砍人案件的故事，將透過愛情、慾望、犯罪包裝6個角色背後賦予的任務與概念，探討Z世代的生活環境，環繞著虛擬、線上遊戲、網紅、社會輿論、家庭問題等等⋯⋯承載著這些來自虛擬卻又真實的視線，一場人人畏懼的殺人案件中，我們可以看見「沒有人是局外人」。`,
     stages: [
       { name: require('@/assets/img/about/partner1.png') },
       { name: require('@/assets/img/about/partner1.png') },
@@ -19,9 +19,9 @@ export const otherList = [
   },
   {
     post: require('@/assets/img/develop/EX4.png'),
-    name: 'Leave Me Alone',
+    name: '不想一個人',
     date: '2021.12',
-    desc: `The movie "Youth Killing Love" mainly describes the story of six characters who seem to be unrelated, but influence each other, and finally get involved in the case of random murder of teenagers. Concept, to explore the living environment of the Z generation, surrounded by virtual, online games, Internet celebrities, social public opinion, family issues, etc... Carrying these virtual but real sights, in a murder case that everyone fears, we can See "no one is an outsider"`,
+    desc: `電影《青春弒戀》主要描敘六位看似毫無關聯，卻相互影響著彼此，最後捲入青少年隨機砍人案件的故事，將透過愛情、慾望、犯罪包裝6個角色背後賦予的任務與概念，探討Z世代的生活環境，環繞著虛擬、線上遊戲、網紅、社會輿論、家庭問題等等⋯⋯承載著這些來自虛擬卻又真實的視線，一場人人畏懼的殺人案件中，我們可以看見「沒有人是局外人」。`,
     stages: [
       { name: require('@/assets/img/about/partner1.png') },
       { name: require('@/assets/img/about/partner1.png') },
@@ -37,9 +37,9 @@ export const otherList = [
   },
   {
     post: require('@/assets/img/develop/EX5.png'),
-    name: 'MoneyBoys',
+    name: '金錢男孩',
     date: '2022.01',
-    desc: `The movie "Youth Killing Love" mainly describes the story of six characters who seem to be unrelated, but influence each other, and finally get involved in the case of random murder of teenagers. Concept, to explore the living environment of the Z generation, surrounded by virtual, online games, Internet celebrities, social public opinion, family issues, etc... Carrying these virtual but real sights, in a murder case that everyone fears, we can See "no one is an outsider"`,
+    desc: `電影《青春弒戀》主要描敘六位看似毫無關聯，卻相互影響著彼此，最後捲入青少年隨機砍人案件的故事，將透過愛情、慾望、犯罪包裝6個角色背後賦予的任務與概念，探討Z世代的生活環境，環繞著虛擬、線上遊戲、網紅、社會輿論、家庭問題等等⋯⋯承載著這些來自虛擬卻又真實的視線，一場人人畏懼的殺人案件中，我們可以看見「沒有人是局外人」。`,
     stages: [
       { name: require('@/assets/img/about/partner1.png') },
       { name: require('@/assets/img/about/partner1.png') },

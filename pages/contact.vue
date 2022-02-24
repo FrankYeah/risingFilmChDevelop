@@ -2,7 +2,7 @@
   <div class="contact">
     <div class="contact-row-inner">
       <div class="contact-line"></div>
-      <div class="contact-head">Contact</div>
+      <div class="contact-head">專人接洽</div>
     </div>
     <form @submit.prevent="handleSubmit()"
       method="POST"
@@ -10,11 +10,11 @@
       target="_blank"
       class="contact-form"
     >
-      <input :class="['contact-input', {'contact-nofill': !isForm.name}]" v-model="name" @focus="focusInput('name')" type="text" placeholder="Name">
-      <input :class="['contact-input', {'contact-nofill': !isForm.phone}]" v-model="phone" @focus="focusInput('phone')" type="text" placeholder="Phone">
-      <input :class="['contact-input', {'contact-nofill': !isForm.mail}]" v-model="mail" @focus="focusInput('mail')" type="text" placeholder="E-Mail">
+      <input :class="['contact-input', {'contact-nofill': !isForm.name}]" v-model="name" @focus="focusInput('name')" type="text" placeholder="姓名">
+      <input :class="['contact-input', {'contact-nofill': !isForm.phone}]" v-model="phone" @focus="focusInput('phone')" type="text" placeholder="聯繫電話">
+      <input :class="['contact-input', {'contact-nofill': !isForm.mail}]" v-model="mail" @focus="focusInput('mail')" type="text" placeholder="電子郵件">
       <div :class="['contact-select', {'contact-nofill': !isForm.service}]">
-        <el-select v-model="service" @focus="focusInput('service')" placeholder="Select service">
+        <el-select v-model="service" @focus="focusInput('service')" placeholder="服務項目">
           <el-option
             v-for="item in serviceOptions"
             :key="item.value"
@@ -24,12 +24,12 @@
           </el-option>
         </el-select>
       </div>
-      <textarea :class="['contact-input contact-textarea', {'contact-nofill': !isForm.message}]" @focus="focusInput('message')" v-model="message" placeholder="Message"></textarea>
+      <textarea :class="['contact-input contact-textarea', {'contact-nofill': !isForm.message}]" @focus="focusInput('message')" v-model="message" placeholder="訊息"></textarea>
       <div class="contact-btn-box">
         <div class="contact-error-text">
           <span v-if="!isPass">Please Fill Required field above</span>
         </div>
-        <button class="contact-btn">Submit</button>
+        <button class="contact-btn">送出</button>
       </div>
     </form>
         
@@ -66,10 +66,10 @@ export default {
       mail: '',
       service: '',
       serviceOptions: [
-        { value: 'Development' },
-        { value: 'Production' },
-        { value: 'Virtual Production' },
-        { value: 'Others' }
+        { value: '開發' },
+        { value: '製作' },
+        { value: '虛擬製作' },
+        { value: '其他合作' }
       ],
       // 英文：Development、Production、Virtual Production、Others
       // 中文：開發、製作、虛擬製作、其他合作
@@ -184,8 +184,8 @@ export default {
   }
 
   &-head {
-    margin: 0px 60px 0px 30px;
-    font-size: 90px;
+    margin: 0px 0px 0px 66px;
+    font-size: 32px;
   }
 
   &-form {
@@ -204,7 +204,6 @@ export default {
 
     &::placeholder {
       color: #FFFFFF;
-      font-style: italic;
     }
   }
 
@@ -220,7 +219,6 @@ export default {
 
     &::placeholder {
       color: #FFFFFF;
-      font-style: italic;
     }
   }
 
@@ -328,12 +326,12 @@ export default {
   }
 
   &-line {
-    width: calc(50vw - 100px);
+    width: calc(50vw - 75px);
   }
 
   &-head {
-    margin: 0px 0px 0px 17px;
-    font-size: 48px;
+    margin: 0px 0px 0px 27px;
+    font-size: 24px;
   }
 
   &-form {
@@ -430,7 +428,6 @@ export default {
   }
 
   .contact-select .el-select .el-input__inner::placeholder {
-    font-style: italic;
     color: white;
     opacity: 1;
   }
@@ -453,7 +450,6 @@ export default {
   }
 
   .el-select-dropdown__item {
-    font-style: italic;
     color: white;
     font-size: 18px;
     background-color: #404040!important;
