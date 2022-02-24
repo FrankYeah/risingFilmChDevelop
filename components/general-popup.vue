@@ -64,7 +64,7 @@ export default {
   justify-content: center;
   align-items: center;
   background-color: rgba(23, 23, 25, 0.8);
-  z-index: 2;
+  z-index: 3;
 
   &-box {
     position: relative;
