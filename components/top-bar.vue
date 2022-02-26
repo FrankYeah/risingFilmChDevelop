@@ -8,10 +8,17 @@
       >
     </nuxt-link>
     <img @click="isShowMenu = true"
-      class="top-menu"
+      class="top-menu top-rwd"
       :src="require('@/assets/img/icon/menu.png')"
       alt="menu"
     >
+
+    <div class="top-row-href top-desktop">
+      <nuxt-link to="/about">關於</nuxt-link>
+      <nuxt-link to="/works">作品</nuxt-link>
+      <nuxt-link to="/virtual">虛擬製作</nuxt-link>
+      <nuxt-link to="/contact">專人洽詢</nuxt-link>
+    </div>
     
 
     <!-- popup -->
@@ -185,6 +192,14 @@ export default {
   width: calc(100% - 64px);
   z-index: 3;
 
+  &-desktop {
+    display: block;
+  }
+
+  &-rwd {
+    display: none;
+  }
+
   &-logo {
     position: fixed;
     top: 32px;
@@ -216,6 +231,25 @@ export default {
 
     &:hover {
       opacity: 1;
+    }
+  }
+
+  &-row-href {
+    position: fixed;
+    top: 32px;
+    right: 32px;
+    display: flex;
+    align-items: center;
+
+    & a {
+      margin-left: 30px;
+      transition: all 0.4s;
+      transition-timing-function: ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.8;
+      }
     }
   }
 
@@ -470,6 +504,14 @@ export default {
 @media( max-width: 1023px ){
 
 .top {
+
+  &-desktop {
+    display: none;
+  }
+
+  &-rwd {
+    display: block;
+  }
   
 
   &-logo {

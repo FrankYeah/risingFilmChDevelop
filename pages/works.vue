@@ -15,7 +15,7 @@
           <div>開發</div>
           <div>轉譯台灣多元文創  發揚台灣軟實力</div>
         </div>
-        <div @click="isMorePopup = true" class="develop-head-more">瞭解更多 &gt;</div>
+        <div @click="switchMorePopup('development')" class="develop-head-more">瞭解更多 &gt;</div>
       </div>
       <swiper class="swiper develop-swiper" :options="swiperOption" ref="mySwiper">
         <swiper-slide class="develop-slide"
@@ -40,7 +40,7 @@
           <div>虛擬製作</div>
           <div>放眼國際，立足台灣  專業製作實現國際合製片</div>
         </div>
-        <div @click="isMorePopup = true" class="develop-head-more">瞭解更多 &gt;</div>
+        <div @click="switchMorePopup('production')" class="develop-head-more">瞭解更多 &gt;</div>
       </div>
       <swiper class="swiper develop-swiper" :options="swiperOption" ref="mySwiper">
         <swiper-slide class="develop-slide"
@@ -66,7 +66,7 @@
           <div>參與</div>
           <div></div>
         </div>
-        <div @click="isMorePopup = true" class="develop-head-more">瞭解更多 &gt;</div>
+        <!-- <div @click="isMorePopup = true" class="develop-head-more">瞭解更多 &gt;</div> -->
       </div>
       <swiper class="swiper develop-swiper" :options="swiperOption" ref="mySwiper">
         <swiper-slide class="develop-slide"
@@ -119,15 +119,8 @@
     <div v-if="isMorePopup" @click="isMorePopup = false" class="develop-popups">
       <div @click.stop class="develop-popups-box">
         <img @click="isMorePopup = false" class="develop-popups-close" :src="require('@/assets/img/icon/close.png')" alt="close">
-        <div class="develop-popups-head">台灣故事 國際觀眾</div>
-        <div class="develop-popups-text">
-          持續扶植影視人才、得獎導演、新銳導演
-          擴大故事來源至出版、劇本獎
-          手握近400部影視優先開發授權之作品
-          從開發、編劇與企劃開始，就導入虛擬製作思維
-          擴大影視敘事的格局與可能性
-          讓台灣作品持續登上國際舞台
-        </div>
+        <div v-html="moreHead" class="develop-popups-head"></div>
+        <div v-html="moreText" class="develop-popups-text"></div>
       </div>
     </div>
   </div>
@@ -164,6 +157,8 @@ export default {
       currentPosition: 'development',
       isPostPopup: false,
       isMorePopup: false,
+      moreHead: '',
+      moreText: '',
       selectedFilm: {
         post: require('@/assets/img/develop/EX1.png'),
         name: 'Terrorizers',
@@ -290,8 +285,30 @@ export default {
     switchPopup (isPopup) {
       this.isPostPopup = isPopup
     },
-    switchMorePopup (isPopup) {
-      this.isMorePopup = isPopup
+    switchMorePopup (popup) {
+      this.isMorePopup = true
+      if(popup == 'development') {
+        this.moreHead = `台灣故事<br>國際觀眾`
+        this.moreText = `
+        持續扶植影視人才、得獎導演、新銳導演<br>
+        並擴大故事來源至出版、劇本獎<br>
+        手握近400部影視優先開發授權之作品<br>
+        從開發、編劇與企劃開始，就導入虛擬製作思維<br>
+        擴大影視敘事的格局與可能性<br>
+        讓台灣作品持續登上國際舞台
+
+        `
+      } else {
+        this.moreHead = `集結專業製作<br>
+                        國內外傳統＆虛擬影視製作項目`
+        this.moreText = `
+        持續不斷製作口碑市場兼具之國內項目<br>
+        同時觸角往國際延伸<br>
+        承接製作世界各地團隊在台灣之協拍項目<br>
+        並以虛擬製作技術支援應變<br>
+        同時展現專業製作能力與國際視野
+        `
+      }
     },
     scrollTo(position) {
       let tempId
@@ -337,7 +354,7 @@ export default {
 
   &-title-box {
     position: fixed;
-    top: 150px;
+    top: 124px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -370,7 +387,7 @@ export default {
   }
 
   &-headtop {
-    padding-top: 200px;
+    padding-top: 174px;
   }
 
   &-swiper-box {
@@ -395,13 +412,14 @@ export default {
       & div:first-child {
         margin-right: 36px;
         font-size: 32px;
-        font-weight: 900;
+        font-weight: 300;
         opacity: 1;
       }
 
       & div:last-child {
         width: 370px;
         line-height: 1.2;
+        font-weight: 100;
         opacity: 0.5;
       }
     }
@@ -533,6 +551,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+    line-height: 1.5;
     background-color: rgba(23, 23, 25, 0.8);
     z-index: 2;
 
@@ -540,18 +559,16 @@ export default {
       position: relative;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      max-width: 288px;
-      margin: 0px 27px;
-      padding: 84px 24px 56px;
+      max-width: 458px;
+      padding: 30px 27px 64px;
       background-color: #29292A;
     }
 
     &-close {
       position: absolute;
       top: 33px;
-      right: 19px;
-      width: 20px;
+      right: 27px;
+      width: 27px;
       opacity: 0.5;
       transition: all 0.4s;
       transition-timing-function: ease-in-out;
@@ -563,15 +580,14 @@ export default {
     }
 
     &-head {
+      margin-top: 44px;
       font-weight: bold;
       font-size: 24px;
     }
 
     &-text {
-      margin-top: 24px;
+      margin-top: 32px;
       font-size: 14px;
-      text-align: center;
-      line-height: 32px;
       
       opacity: 0.5;
     }
@@ -738,6 +754,26 @@ export default {
       max-width: 180px;
       width: 45%;
       margin: 0px 0px 10px 0px;
+    }
+  }
+  
+  &-popups {
+    
+
+    &-box {
+      margin: 0px 24px;
+    }
+
+    &-close {
+      right: 19px;
+    }
+
+    &-head {
+      font-size: 18px;
+    }
+
+    &-text {
+      font-size: 14px;
     }
   }
   

@@ -204,6 +204,7 @@ export default {
 
     &::placeholder {
       color: #FFFFFF;
+      opacity: 0.5;
     }
   }
 
@@ -219,6 +220,7 @@ export default {
 
     &::placeholder {
       color: #FFFFFF;
+      opacity: 0.5;
     }
   }
 
@@ -429,7 +431,7 @@ export default {
 
   .contact-select .el-select .el-input__inner::placeholder {
     color: white;
-    opacity: 1;
+    opacity: 0.5;
   }
 
   .el-popper .popper__arrow::after {
