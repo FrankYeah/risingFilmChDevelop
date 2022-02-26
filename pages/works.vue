@@ -32,6 +32,12 @@
         </swiper-slide>
         <div class="swiper-scrollbar" slot="scrollbar"></div>
       </swiper>
+      <div class="develop-hint">
+        <div>Scroll Down</div>
+        <div class="develop-hint-box">
+          <div class="develop-hint-line"></div>
+        </div>
+      </div>
     </div>
 
     <div id="production" class="develop-swiper-box">
@@ -174,50 +180,14 @@ export default {
       swiperOption: {
         scrollbar: true,
         mousewheel: true,
+        slidesPerView: "auto",
+        spaceBetween: 36,
         scrollbar: {
           el: ".swiper-scrollbar",
         },
         autoplay: {
           disableOnInteraction: false
         },
-        breakpoints: {
-          1300: {
-            slidesPerView: 4,
-            spaceBetween: 30,
-          },
-          1000: {
-            slidesPerView: 3,
-            spaceBetween: 30,
-          },
-          800: {
-            slidesPerView: 2,
-            spaceBetween: 30,
-          },
-          620: {
-            slidesPerView: 2,
-            spaceBetween: 0,
-          },
-          500: {
-            slidesPerView: 'auto',
-            spaceBetween: -120,
-          },
-          400: {
-            slidesPerView: 'auto',
-            spaceBetween: -60,
-          },
-          340: {
-            slidesPerView: 'auto',
-            spaceBetween: -30,
-          },
-          340: {
-            slidesPerView: 'auto',
-            spaceBetween: -20,
-          },
-          320: {
-            slidesPerView: 'auto',
-            spaceBetween: 0,
-          }
-        }
       },
       swiperOption2: {
         scrollbar: true,
@@ -350,6 +320,9 @@ export default {
 
 <style lang="scss" scoped>
 
+$line-height: 60px;
+$line-height-abs: -60px;
+
 .develop {
 
   &-title-box {
@@ -391,6 +364,7 @@ export default {
   }
 
   &-swiper-box {
+    position: relative;
     margin: 30px 0px 140px 13%;
 
     &:last-child {
@@ -442,6 +416,7 @@ export default {
   }
 
   &-slide {
+    width: 250px;
     padding-bottom: 50px;
     cursor: pointer;
 
@@ -461,6 +436,51 @@ export default {
 
   .swiper-scrollbar-drag {
 
+  }
+
+  &-hint {
+    position: absolute;
+    left: -13%;
+    bottom: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    & div:first-child {
+      font-weight: 100;
+      writing-mode: tb-rl;
+      transform: rotate(180deg);
+    }
+
+    &-box {
+      width: 1px;
+      height: $line-height;
+      overflow: hidden;
+    }
+
+    &-line {
+      width: 100%;
+      height: 100%;
+      display: block;
+      background: linear-gradient(to bottom, #9D9D9D 50%, #171719 50%);
+      background-position: 0 $line-height-abs;
+      background-size: 100% 200%;
+      margin-top: 13px;
+      background-color: #171719;
+      animation: lineAnimate 2.2s cubic-bezier(0.76, 0, 0.3, 1) forwards infinite;
+    }
+  }
+
+  @keyframes lineAnimate {
+    0%{
+      background-position: 0 $line-height-abs;
+    }
+    75% {
+      background-position: 0 0;
+    }
+    100%{
+      background-position: 0 $line-height;
+    }
   }
 
   &-post-box {
@@ -677,6 +697,7 @@ export default {
   }
 
   &-slide {
+    width: 286px;
     padding-bottom: 32px;
   }
 
