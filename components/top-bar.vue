@@ -13,11 +13,65 @@
       alt="menu"
     >
 
-    <div class="top-row-href top-desktop">
-      <nuxt-link to="/about">關於</nuxt-link>
-      <nuxt-link to="/works">作品</nuxt-link>
-      <nuxt-link to="/virtual">虛擬製作</nuxt-link>
-      <nuxt-link to="/contact">專人洽詢</nuxt-link>
+    <div class="top-header-href-box top-desktop">
+      <nuxt-link to="/about" class="top-header-link">
+        <div @click="closeMenu"
+          @mouseover="hoverLink('about')" 
+          @mouseleave="leaveLink"
+          :class="[`top-header-href top-header-href1 top-popup-animate1`,
+          {'top-popup-href-dark': !isHover.about},
+          {'top-popup-href-light': isAllLight}]"
+        >關於</div>
+        <div @click="closeMenu" :class="['top-header-line', {'top-popup-line-show top-header-line1': isHover.about}]"></div>
+      </nuxt-link>
+
+      <div class="top-header-link">
+        <div @click="isHover.developmentIn = true"
+          @mouseover="hoverLink('development')"
+          :class="['top-header-href top-header-href2 top-popup-animate2', {'top-popup-href-dark': !isHover.development}, {'top-popup-href-light': isAllLight}]"
+        >作品</div>
+        <div @click="closeMenu" @mouseover="hoverLink('development')" :class="['top-header-line', {'top-popup-line-show top-header-line2': isHover.development}]" ></div>
+      </div>
+
+      <div v-if="isHover.developmentIn"
+        @mouseover="hoverLink('development')"
+        class="top-header-href-s-box"
+      >
+        <nuxt-link to="/works#other">
+          <div @click="closeMenu"
+            @mouseover="hoverLink('development')"
+            class="top-header-href-s"
+          >參與</div>
+        </nuxt-link>
+        <nuxt-link to="/works#production">
+          <div @click="closeMenu"
+            @mouseover="hoverLink('development')"
+            class="top-header-href-s"
+          >製作</div>
+        </nuxt-link>
+        <nuxt-link to="/works#development">
+          <div @click="closeMenu"
+            @mouseover="hoverLink('development')"
+            class="top-header-href-s top-header-href-s-last"
+          >開發</div>
+        </nuxt-link>
+      </div>
+      <nuxt-link to="/virtual" class="top-header-link">
+        <div @click="closeMenu"
+          @mouseover="hoverLink('virtual')" 
+          @mouseleave="leaveLink" 
+          :class="['top-header-href top-header-href4 top-popup-animate3', {'top-popup-href-dark': !isHover.virtual}, {'top-popup-href-light': isAllLight}]"
+        >虛擬製作</div>
+        <div @click="closeMenu" :class="['top-header-line', {'top-popup-line-show top-header-line4': isHover.virtual}]"></div>
+      </nuxt-link>
+      <nuxt-link to="/contact" class="top-header-link">
+        <div @click="closeMenu"
+          @mouseover="hoverLink('contact')" 
+          @mouseleave="leaveLink" 
+          :class="['top-header-href top-header-href5 top-popup-animate4', {'top-popup-href-dark': !isHover.contact}, {'top-popup-href-light': isAllLight}]"
+        >專人洽詢</div>
+        <div @click="closeMenu" :class="['top-header-line', {'top-popup-line-show top-header-line5': isHover.contact}]"></div>
+      </nuxt-link>
     </div>
     
 
@@ -234,21 +288,95 @@ export default {
     }
   }
 
-  &-row-href {
-    position: fixed;
-    top: 32px;
-    right: 32px;
-    display: flex;
-    align-items: center;
+  &-header {
 
-    & a {
-      margin-left: 30px;
+    &-href-box {
+      position: fixed;
+      top: 32px;
+      right: 32px;
+      display: flex;
+      align-items: center;
+    }
+
+    &-href {
+      margin: 20px 0px 0px 30px;
+      padding: 0px 0px 8px;
       transition: all 0.4s;
       transition-timing-function: ease-in-out;
       cursor: pointer;
 
+      :hover {
+        color: white;
+      }
+    }
+
+    &-link {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    &-href1 {
+      width: 38px;
+    }
+
+    &-href2 {
+      position: relative;
+      width: 38px;
+    }
+
+    &-href4 {
+      width: 76px;
+    }
+
+    &-href5 {
+      width: 76px;
+    }
+
+    &-line {
+      width: 1px;
+      height: 1.5px;
+      transform: translateX(-2px);
+      background-color: transparent;
+      transition: 0.3s;
+    }
+
+    &-line1 {
+      width: 36px !important;
+    }
+
+    &-line2 {
+      width: 36px !important;
+    }
+
+    &-line4 {
+      width: 74px !important;
+    }
+
+    &-line5 {
+      width: 74px !important;
+    }
+
+    &-href-s-box {
+      position: absolute;
+      top: 40px;
+      left: 34px;
+      display: flex;
+      padding: 17px 0px 0px 0px;
+
+      & a:first-child {
+        margin-top: 0px;
+      }
+    }
+
+    &-href-s {
+      padding-right: 30px;
+      transition: all 0.4s;
+      transition-timing-function: ease-in-out;
+      opacity: 0.15; 
+
       &:hover {
-        opacity: 0.8;
+        opacity: 1;
       }
     }
   }
