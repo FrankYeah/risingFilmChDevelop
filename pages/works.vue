@@ -189,7 +189,8 @@ export default {
           el: ".swiper-scrollbar",
         },
         autoplay: {
-          disableOnInteraction: false
+          disableOnInteraction: false,
+          delay: 5000
         },
       },
       swiperOption2: {

@@ -121,11 +121,11 @@
             @mouseover="hoverLink('development')"
             class="top-popup-href-s-box"
           >
-            <nuxt-link to="/works#other">
+            <nuxt-link to="/works#development">
               <div @click="closeMenu"
                 @mouseover="hoverLink('development')"
                 class="top-popup-href-s"
-              >參與</div>
+              >開發</div>
             </nuxt-link>
             <nuxt-link to="/works#production">
               <div @click="closeMenu"
@@ -133,11 +133,11 @@
                 class="top-popup-href-s"
               >製作</div>
             </nuxt-link>
-            <nuxt-link to="/works#development">
+            <nuxt-link to="/works#other">
               <div @click="closeMenu"
                 @mouseover="hoverLink('development')"
                 class="top-popup-href-s top-popup-href-s-last"
-              >開發</div>
+              >參與</div>
             </nuxt-link>
           </div>
           <nuxt-link to="/virtual">
