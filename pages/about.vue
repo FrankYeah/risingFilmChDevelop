@@ -28,7 +28,7 @@
 
     <boxWidth>
       <div class="about-member-box">
-        <div>團隊成員</div>
+        <div>專業團隊</div>
         <div>集結業界開發/製作/行銷專家，打造一條龍產製商業模式</div>
       </div>
       <div class="about-intro">
@@ -128,7 +128,6 @@ export default {
 
 .about {
   padding-bottom: 60px;
-  line-height: 1.3;
 
   &-desktop {
     display: block;
@@ -153,6 +152,7 @@ export default {
     max-width: 1000px;
     width: 100%;
     margin-top: 57px;
+    padding: 0px 27px;
     text-align: center;
   }
 
@@ -171,14 +171,12 @@ export default {
   &-post-text1 {
     width: 70%;
     margin-top: 39px;
-    line-height: 1.5;
     font-size: 14px;
     opacity: 0.7;
   }
 
   &-post-text2 {
     margin-top: 20px;
-    line-height: 1.5;
     font-size: 14px;
     opacity: 0.7;
   }
@@ -190,13 +188,14 @@ export default {
   &-banner {
     max-width: 1000px;
     width: 100%;
+    padding: 0px 27px;
     margin-top: 80px;
     text-align: center;
   }
 
   &-member-box {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     margin-top: 112px;
     
     & div:first-child {
@@ -262,6 +261,7 @@ export default {
 
   &-partner {
     width: 195px;
+    height: 100%;
   }
 
   &-popup {
@@ -291,8 +291,7 @@ export default {
     }
 
     &-desc {
-      margin-top: 23px;
-      line-height: 1.5;
+      margin: 23px 34px 0px 0px;
       font-size: 14px;
       opacity: 0.5;
     }
@@ -334,6 +333,7 @@ export default {
 
   &-post {
     margin-top: 42px;
+    padding: 0px;
   }
 
   &-post-head1 {
@@ -358,6 +358,7 @@ export default {
 
   &-banner {
     margin-top: 48px;
+    padding: 0px;
   }
 
   &-member-box {
@@ -372,7 +373,6 @@ export default {
 
     & div:last-child {
       margin-top: 16px;
-      line-height: 1.3;
     }
   }
 
@@ -412,6 +412,7 @@ export default {
   &-partner {
     max-width: 180px;
     width: 45%;
+    height: 100%;
   }
 
   &-popup {
@@ -443,7 +444,8 @@ export default {
     }
 
     &-desc {
-      margin-top: 13px;
+      
+      margin: 13px 0px 0px 0px;
     }
 
     &-awards {

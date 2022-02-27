@@ -2,7 +2,7 @@
   <div class="contact">
     <div class="contact-row-inner">
       <div class="contact-line"></div>
-      <div class="contact-head">專人接洽</div>
+      <div class="contact-head">專人洽詢</div>
     </div>
     <form @submit.prevent="handleSubmit()"
       method="POST"
@@ -291,7 +291,6 @@ export default {
       margin-top: 8px;
       font-size: 14px;
       text-align: center;
-      line-height: 1.2;
       opacity: 0.5;
     }
 

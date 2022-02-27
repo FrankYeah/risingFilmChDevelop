@@ -323,20 +323,20 @@ export default {
     }
 
     &-href1 {
-      width: 38px;
+      width: 40px;
     }
 
     &-href2 {
       position: relative;
-      width: 38px;
+      width: 40px;
     }
 
     &-href4 {
-      width: 76px;
+      width: 80px;
     }
 
     &-href5 {
-      width: 76px;
+      width: 80px;
     }
 
     &-line {
@@ -387,7 +387,7 @@ export default {
     }
 
     &-language {
-      margin: 20px 0px 0px 30px;
+      margin: 20px 0px 0px 50px;
       padding: 0px 0px 8px;
     }
 
@@ -497,19 +497,19 @@ export default {
     }
 
     &-href1 {
-      width: 50px;
+      width: 54px;
     }
 
     &-href2 {
-      width: 50px;
+      width: 54px;
     }
 
     &-href4 {
-      width: 100px;
+      width: 108px;
     }
 
     &-href5 {
-      width: 100px;
+      width: 108px;
     }
 
     &-animate1 {
