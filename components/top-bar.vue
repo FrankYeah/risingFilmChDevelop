@@ -25,15 +25,16 @@
         <div @click="closeMenu" :class="['top-header-line', {'top-popup-line-show top-header-line1': isHover.about}]"></div>
       </nuxt-link>
 
-      <div class="top-header-link">
-        <div @click="isHover.developmentIn = true"
-          @mouseover="hoverLink('development')"
+      <nuxt-link to="/works" class="top-header-link">
+        <div
+          @mouseover="hoverLink('development')" 
+          @mouseleave="leaveLink"
           :class="['top-header-href top-header-href2 top-popup-animate2', {'top-popup-href-dark': !isHover.development}, {'top-popup-href-light': isAllLight}]"
         >作品</div>
         <div @click="closeMenu" @mouseover="hoverLink('development')" :class="['top-header-line', {'top-popup-line-show top-header-line2': isHover.development}]" ></div>
-      </div>
+      </nuxt-link>
 
-      <div v-if="isHover.developmentIn"
+      <!-- <div v-if="isHover.developmentIn"
         @mouseover="hoverLink('development')"
         class="top-header-href-s-box"
       >
@@ -55,7 +56,7 @@
             class="top-header-href-s top-header-href-s-last"
           >開發</div>
         </nuxt-link>
-      </div>
+      </div> -->
       <nuxt-link to="/virtual" class="top-header-link">
         <div @click="closeMenu"
           @mouseover="hoverLink('virtual')" 
@@ -72,6 +73,11 @@
         >專人洽詢</div>
         <div @click="closeMenu" :class="['top-header-line', {'top-popup-line-show top-header-line5': isHover.contact}]"></div>
       </nuxt-link>
+      <div class="top-header-language top-popup-animate5">
+        <span>中</span>
+        ｜
+        <a href="https://frankyeah.github.io/risingFilmEn/" target="_blank" class="top-header-lang" style="opacity: 0.3; font-family: 'Roboto';">EN</a>
+      </div>
     </div>
     
 
@@ -377,6 +383,21 @@ export default {
 
       &:hover {
         opacity: 1;
+      }
+    }
+
+    &-language {
+      margin: 20px 0px 0px 30px;
+      padding: 0px 0px 8px;
+    }
+
+    &-lang {
+      transition: all 0.4s;
+      transition-timing-function: ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 1 !important;
       }
     }
   }
