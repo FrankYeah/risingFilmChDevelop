@@ -56,7 +56,7 @@
       <generalPopup :isShowPopup="isPersonPopup" @switchPopup="switchPopup">
         <div class="about-popup-row">
           <img class="about-popup-person" :src="selectedPerson.person2" alt="post">
-          <div>
+          <div class="about-popup-column">
             <div class="about-popup-title">{{ selectedPerson.name }}</div>
             <div class="about-popup-sub">{{ selectedPerson.title }}</div>
             <div class="about-popup-desc">{{ selectedPerson.desc }}</div>
@@ -158,12 +158,14 @@ export default {
 
   &-post-head1 {
     margin-top: 71px;
-    font-size: 24px;
+    font-size: 14px;
+    opacity: 0.7;
   }
 
   &-post-head2 {
     margin-top: 12px;
-    font-size: 24px;
+    font-size: 14px;
+    opacity: 0.7;
   }
 
   &-post-text1 {
@@ -268,6 +270,12 @@ export default {
       display: flex;
     }
 
+    &-column {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
     &-person {
       width: 275px;
       margin-right: 36px;
@@ -330,14 +338,10 @@ export default {
 
   &-post-head1 {
     margin-top: 48px;
-    font-size: 16px;
-    font-weight: 700;
   }
 
   &-post-head2 {
     margin-top: 22px;
-    font-size: 16px;
-    font-weight: 700;
   }
 
   &-post-text1 {
@@ -415,6 +419,10 @@ export default {
     &-row {
       flex-direction: column;
       align-items: center;
+    }
+
+    &-column {
+      display: block;
     }
 
     &-person {

@@ -83,7 +83,7 @@
         <div class="top-popup-language top-popup-animate5">
           <span>中</span>
           ｜
-          <a href="https://www.risingfilm.asia" target="_blank" class="top-popup-lang" style="opacity: 0.3; font-family: 'Roboto';">EN</a>
+          <a href="https://frankyeah.github.io/risingFilmEn/" target="_blank" class="top-popup-lang" style="opacity: 0.3; font-family: 'Roboto';">EN</a>
         </div>
         <div class="top-popup-row">
           <div></div>
