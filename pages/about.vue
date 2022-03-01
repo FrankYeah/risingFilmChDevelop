@@ -4,7 +4,7 @@
       <headTop>
         <generalTitle :title="'關於風度'"></generalTitle>
       </headTop>
-      <div class="about-pre">風度影業凝聚資源挹注台灣影視 人才，結合資源、創意、商業模 式， 開創台灣影視新局。</div>
+      <div class="about-pre">風度影業凝聚資源挹注台灣影視人才，結合資源、創意、商業模式， 開創台灣影視新局。</div>
     </boxWidth>
     <div class="about-post-box">
       <img class="about-post" :src="require('@/assets/img/about/post.jpg')" alt="post">
@@ -13,7 +13,7 @@
       <div class="about-post-head1">2022年風度影業開展佈局，與影視產業其他金獎團隊結盟合作</div>
       <div class="about-post-head2">由何蔚庭監製、鄺盛導演領軍，與好萊塢虛擬製作團隊聯合拍攝國際影片</div>
       <div class="about-desktop">
-      <div class="about-post-text1">行銷部門整合市場與製作，以產業加值為目標，透過多元跨界、多媒體的溝通方式，耕耘累積品牌價值，並依產業界各環節專業人士之職務屬性，推廣合適的虛擬製作觀念與思維</div>
+      <div class="about-post-text1">行銷部門整合市場與製作，以產業加值為目標，透過多元跨界、多媒體的溝通方式，<br>耕耘累積品牌價值，並依產業界各環節專業人士之職務屬性，推廣合適的虛擬製作觀念與思維</div>
       <div class="about-post-text2">美國虛擬攝影棚搭建專業顧問來台協力，共同打造 270度圓弧形的LED虛擬攝影棚，建構國際化影視製作流程</div>
       </div>
     </boxWidth>
@@ -59,7 +59,7 @@
           <div class="about-popup-column">
             <div class="about-popup-title">{{ selectedPerson.name }}</div>
             <div class="about-popup-sub">{{ selectedPerson.title }}</div>
-            <div class="about-popup-desc">{{ selectedPerson.desc }}</div>
+            <div class="about-popup-desc" v-html="selectedPerson.desc"></div>
             <div v-if="selectedPerson.awards.length != 0" class="about-popup-awards">得獎</div>
             <div class="about-popup-award"
               v-for="(award, index) in selectedPerson.awards"
@@ -140,8 +140,9 @@ export default {
   &-pre {
     display: flex;
     align-items: center;
+    text-align: justify;
     margin-top: 50px;
-    font-size: 32px;
+    font-size: 28px;
   }
 
   &-post-box {
@@ -169,15 +170,16 @@ export default {
   }
 
   &-post-text1 {
-    width: 70%;
     margin-top: 39px;
     font-size: 14px;
+    text-align: justify;
     opacity: 0.7;
   }
 
   &-post-text2 {
     margin-top: 20px;
     font-size: 14px;
+    text-align: justify;
     opacity: 0.7;
   }
 
@@ -293,6 +295,7 @@ export default {
     &-desc {
       margin: 23px 34px 0px 0px;
       font-size: 14px;
+      text-align: justify;
       opacity: 0.5;
     }
 

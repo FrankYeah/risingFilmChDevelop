@@ -79,6 +79,7 @@ export default {
   &-copyright {
     font-family: 'Roboto';
     font-size: 14px;
+    letter-spacing: 0.05em;
     opacity: 0.7;
   }
 }

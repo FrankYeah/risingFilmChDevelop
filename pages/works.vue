@@ -370,10 +370,10 @@ $line-height-abs: -60px;
 
   &-swiper-box {
     position: relative;
-    margin: 30px 0px 140px 13%;
+    margin: 30px 36px 140px 13%;
 
     &:last-child {
-      margin: 30px 0px 94px 13%;
+      margin: 30px 36px 94px 13%;
     }
   }
 
@@ -390,7 +390,7 @@ $line-height-abs: -60px;
 
       & div:first-child {
         margin-right: 36px;
-        font-size: 32px;
+        font-size: 28px;
         font-weight: 300;
         opacity: 1;
       }
@@ -532,6 +532,7 @@ $line-height-abs: -60px;
     &-desc {
       margin-top: 30px;
       font-size: 14px;
+      text-align: justify;
       opacity: 0.5;
     }
 
@@ -678,7 +679,7 @@ $line-height-abs: -60px;
   }
 
   &-swiper-box {
-    margin: 92px 0px 86px 27px;
+    margin: 92px 36px 86px 27px;
   }
 
   &-head {
@@ -701,6 +702,7 @@ $line-height-abs: -60px;
       & div:last-child {
         width: 100%;
         margin-top: 10px;
+        text-align: justify;
       }
     }
 
@@ -821,6 +823,7 @@ $line-height-abs: -60px;
 
     &-text {
       font-size: 14px;
+      text-align: justify;
     }
   }
   
