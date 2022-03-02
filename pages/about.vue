@@ -4,7 +4,8 @@
       <headTop>
         <generalTitle :title="'關於風度'"></generalTitle>
       </headTop>
-      <div class="about-pre">風度影業凝聚資源挹注台灣影視人才，結合資源、創意、商業模式， 開創台灣影視新局。</div>
+      <div class="about-pre about-desktop">風度影業凝聚資源挹注台灣影視人才，結合資源、創意、商業模式，<br>開創台灣影視新局。</div>
+      <div class="about-pre about-rwd">風度影業凝聚資源挹注台灣影視人才，結合資源、創意、商業模式，開創台灣影視新局。</div>
     </boxWidth>
     <div class="about-post-box">
       <img class="about-post" :src="require('@/assets/img/about/post.jpg')" alt="post">
@@ -130,11 +131,11 @@ export default {
   padding-bottom: 60px;
 
   &-desktop {
-    display: block;
+    display: block !important;
   }
 
   &-rwd {
-    display: none;
+    display: none !important;
   }
 
   &-pre {
@@ -142,7 +143,7 @@ export default {
     align-items: center;
     text-align: justify;
     margin-top: 50px;
-    font-size: 28px;
+    font-size: 24px;
   }
 
   &-post-box {
@@ -202,7 +203,7 @@ export default {
     
     & div:first-child {
       margin-right: 48px;
-      font-size: 32px;
+      font-size: 24px;
     }
   }
 
@@ -250,7 +251,7 @@ export default {
 
   &-partner-title {
     margin-top: 100px;
-    font-size: 32px;
+    font-size: 24px;
   }
 
   &-partner-box {
@@ -318,11 +319,11 @@ export default {
   padding-bottom: 0px;
 
   &-desktop {
-    display: none;
+    display: none !important;;
   }
 
   &-rwd {
-    display: block;
+    display: block !important;
   }
 
   &-pre {
