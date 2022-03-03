@@ -15,7 +15,7 @@
       <div class="develop-head">
         <div class="develop-head-row">
           <div>開發</div>
-          <div>轉譯台灣多元文創  發揚台灣軟實力</div>
+          <!-- <div>轉譯台灣多元文創  發揚台灣軟實力</div> -->
         </div>
         <div @click="switchMorePopup('development')" class="develop-head-more">瞭解更多 &gt;</div>
       </div>
@@ -46,7 +46,7 @@
       <div class="develop-head">
         <div class="develop-head-row">
           <div>虛擬製作</div>
-          <div>放眼國際，立足台灣  專業製作實現國際合製片</div>
+          <!-- <div>放眼國際，立足台灣  專業製作實現國際合製片</div> -->
         </div>
         <div @click="switchMorePopup('production')" class="develop-head-more">瞭解更多 &gt;</div>
       </div>
@@ -271,7 +271,7 @@ export default {
     switchMorePopup (popup) {
       this.isMorePopup = true
       if(popup == 'development') {
-        this.moreHead = `台灣故事<br>國際觀眾`
+        this.moreHead = `台灣故事 國際觀眾`
         this.moreText = `
         持續扶植影視人才、得獎導演、新銳導演<br>
         並擴大故事來源至出版、劇本獎<br>
@@ -667,6 +667,7 @@ $line-height-abs: -60px;
 
     &-text {
       margin-top: 32px;
+      line-height: 1.9;
       font-size: 14px;
       
       opacity: 0.5;
@@ -832,7 +833,7 @@ $line-height-abs: -60px;
 
     &-more {
       position: absolute;
-      top: 8px;
+      top: 20px;
       right: 0px;
       margin-right: 20px;
     }

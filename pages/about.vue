@@ -4,7 +4,7 @@
       <headTop>
         <generalTitle :title="'關於風度'"></generalTitle>
       </headTop>
-      <div class="about-pre about-desktop">風度影業凝聚資源挹注台灣影視人才，結合資源、創意、商業模式，<br>開創台灣影視新局。</div>
+      <div class="about-pre about-desktop">風度影業凝聚資源挹注台灣影視人才，<br>結合資源、創意、商業模式，開創台灣影視新局。</div>
       <div class="about-pre about-rwd">風度影業凝聚資源挹注台灣影視人才，結合資源、創意、商業模式，開創台灣影視新局。</div>
     </boxWidth>
     <div class="about-post-box">

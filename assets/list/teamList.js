@@ -15,7 +15,7 @@ export const teamList = [
       title: '導演',
       person: require('@/assets/img/about/Kuang.png'),
       person2: require('@/assets/img/about/Kuang2.png'),
-      desc: `華語地區多變型、最搶手的MV導演，亞洲一線歌手都有他掌鏡的作品。<br>鄺盛作品散發出來的是隨心所欲的創作動力和狂野不羈的態度，每一部作品你都能看到不一樣的鄺盛。`,
+      desc: `華語地區多變型、最搶手的MV導演，亞洲一線歌手都有他掌鏡的作品，鄺盛作品散發出來的是隨心所欲的創作動力和狂野不羈的態度，每一部作品你都能看到不一樣的鄺盛。`,
       awards: [
         // { name: 'award name1' },
         // { name: 'award name2' },
