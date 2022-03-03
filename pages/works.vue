@@ -45,7 +45,7 @@
     <div id="production" class="develop-swiper-box">
       <div class="develop-head">
         <div class="develop-head-row">
-          <div>虛擬製作</div>
+          <div>製作</div>
           <!-- <div>放眼國際，立足台灣  專業製作實現國際合製片</div> -->
         </div>
         <div @click="switchMorePopup('production')" class="develop-head-more">瞭解更多 &gt;</div>
