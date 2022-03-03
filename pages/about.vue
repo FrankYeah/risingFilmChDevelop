@@ -30,7 +30,7 @@
     <boxWidth>
       <div class="about-member-box">
         <div>專業團隊</div>
-        <div>集結業界開發/製作/行銷專家，打造一條龍產製商業模式</div>
+        <div></div>
       </div>
       <div class="about-intro">
         <div class="about-team-box" 
